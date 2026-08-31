@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💜 Lacrei Saúde — Desafio Técnico Front-end
 
-## Getting Started
+Desafio técnico de voluntariado front-end para a Lacrei Saúde, seguindo o Marsha Design System (Figma).
 
-First, run the development server:
+> ⚠️ **Status: em desenvolvimento.** Este README documenta o progresso real do projeto, incluindo o que ainda está pendente.
 
-```bash
+## 🛠️ Tecnologias
+
+- [Next.js](https://nextjs.org/) (App Router)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Styled-Components](https://styled-components.com/) (com SSR Registry)
+- [MSW (Mock Service Worker)](https://mswjs.io/) — mock de API (bônus)
+
+## 🚀 Como rodar localmente
+
+```powershell
+git clone <url-do-repositorio>
+cd lacrei-saude-challenge
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Estrutura de pastas
+lacrei-saude-challenge/
+├── src/
+│ ├── app/
+│ │ ├── layout.tsx
+│ │ └── page.tsx
+│ ├── components/
+│ │ └── Welcome/
+│ │ ├── WelcomeHero.tsx
+│ │ ├── WelcomeHero.styles.ts
+│ │ ├── InfoCard.tsx
+│ │ ├── InfoCard.styles.ts
+│ │ ├── Tag.tsx
+│ │ └── Tag.styles.ts
+│ └── mocks/
+│ ├── data.json
+│ ├── handlers.ts
+│ └── browser.ts
+├── public/
+├── tsconfig.json
+└── README.md
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## 📊 Progresso atual
 
-To learn more about Next.js, take a look at the following resources:
+### ✅ Concluído
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Setup do projeto (Next.js + TypeScript + Styled-Components)
+- Registry SSR do Styled-Components configurado
+- Alias `@/*` corrigido no `tsconfig.json` (apontando para `./src/*`)
+- Mock de API com MSW configurado (bônus)
+- Componentes `WelcomeHero`, `InfoCard` e `Tag` criados
+- Página inicial (`src/app/page.tsx`) montada com Hero + 2 cards informativos, baseada no Guia de Estilo Marsha P. Johnson (Figma)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🚧 Pendente
 
-## Deploy on Vercel
+- [ ] Confirmar cores e tipografia exatas do Design System (atualmente estimadas por print — acesso ao Figma restrito, ver observação abaixo)
+- [ ] `theme.ts` com os tokens do Design System (cores, tipografia, espaçamento)
+- [ ] Header e Footer reutilizáveis
+- [ ] Segunda rota/página
+- [ ] 3 botões interativos com ações reais
+- [ ] Responsividade validada em pelo menos 3 breakpoints
+- [ ] Testes unitários (mínimo 3)
+- [ ] Validação de acessibilidade (Lighthouse ≥ 90)
+- [ ] Validação de performance (Lighthouse ≥ 80)
+- [ ] Deploy público
+- [ ] Documentação de rollback
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🔒 Observação sobre acesso ao Design System
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+O arquivo do Figma foi disponibilizado em modo somente leitura (view-only), o que limitou a extração de assets e valores exatos de estilo (cores, tipografia) em alguns blocos. Onde não foi possível confirmar o valor exato, uma estimativa visual foi aplicada e está marcada como pendente de ajuste no código-fonte.
+
+## ↩️ Rollback
+
+<!-- TODO: documentar processo de rollback (ex: como reverter para a última versão estável em produção) -->
+
+## 🌐 Deploy
+
+<!-- TODO: link do deploy público -->
+
+## 👤 Autor
+
+Douglas — [GitHub](#) · [LinkedIn](#)
